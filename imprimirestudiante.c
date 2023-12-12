@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "aliasestudiante.c"
 
-void imprimirEstudiante(Estudiante est) {
-    printf("Nombre: %s\n", est.nombre);
-    printf("Edad: %d\n", est.edad);
-    printf("Promedio: %.2f\n", est.promedio);
+void imprimirEstudiante(Estudiante *est) {
+    printf("Nombre: %s\n", est->nombre);
+    printf("Edad: %d\n", est->edad);
+    printf("Promedio: %.2f\n", est->promedio);
 }
 
 int main() {
@@ -13,7 +13,7 @@ int main() {
     estudiante1.edad = 20;
     estudiante1.promedio = 9.5;
 
-    imprimirEstudiante(estudiante1);
+    imprimirEstudiante(&estudiante1);
 
     return 0;
 }
