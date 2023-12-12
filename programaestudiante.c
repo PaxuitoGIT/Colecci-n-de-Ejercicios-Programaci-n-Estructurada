@@ -42,3 +42,12 @@ void eliminarEstudiante(char *nombre) {
     prev->siguiente = temp->siguiente;
     free(temp);
 }
+
+int main() {
+    agregarEstudiante("Juan", 20, 9.5);
+    agregarEstudiante("Ana", 22, 9.0);
+    verEstudiantes();
+    eliminarEstudiante("Juan");
+    verEstudiantes();
+    return 0;
+}
