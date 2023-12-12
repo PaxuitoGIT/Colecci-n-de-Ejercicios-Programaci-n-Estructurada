@@ -26,3 +26,19 @@ void verEstudiantes() {
         temp = temp->siguiente;
     }
 }
+
+void eliminarEstudiante(char *nombre) {
+    struct Nodo *temp = inicio, *prev;
+    if (temp != NULL && strcmp(temp->estudiante.nombre, nombre) == 0) {
+        inicio = temp->siguiente;
+        free(temp);
+        return;
+    }
+    while (temp != NULL && strcmp(temp->estudiante.nombre, nombre) != 0) {
+        prev = temp;
+        temp = temp->siguiente;
+    }
+    if (temp == NULL) return;
+    prev->siguiente = temp->siguiente;
+    free(temp);
+}
