@@ -19,3 +19,10 @@ public:
         std::cout << "Promedio: " << promedio << std::endl;
     }
 };
+
+int main() {
+    Estudiante estudiante1("Juan", 20, 9.5);
+    estudiante1.imprimir();
+
+    return 0;
+}
