@@ -18,3 +18,11 @@ void agregarEstudiante(char *nombre, int edad, float promedio) {
     nuevoNodo->siguiente = inicio;
     inicio = nuevoNodo;
 }
+
+void verEstudiantes() {
+    struct Nodo *temp = inicio;
+    while (temp != NULL) {
+        printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", temp->estudiante.nombre, temp->estudiante.edad, temp->estudiante.promedio);
+        temp = temp->siguiente;
+    }
+}
